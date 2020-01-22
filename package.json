@@ -1,0 +1,39 @@
+{
+  "name": "calsot",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmoralp/calsot.git"
+  },
+  "author": {
+    "name": "Rafael Moral Pareja",
+    "email": "rafamp89@gmail.com",
+    "url": "https://rmoral.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rmoralp/calsot/issues"
+  },
+  "homepage": "https://github.com/rmoralp/calsot#readme",
+  "scripts": {
+    "dev": "nodemon",
+    "dev:serve": "ts-node src/index.ts",
+    "lint": "tslint --project .",
+    "build": "rimraf dist && tsc",
+    "build:serve": "ts-node dist/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.1.8",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.6.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5"
+  }
+}
