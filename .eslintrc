@@ -1,20 +1,29 @@
 {
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
-  "extends": ["plugin:@typescript-eslint/recommended"],
-  "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module"
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
   },
   "rules": {
-    "semi": ["error", "always"],
-    "quotes": ["error", "double"],
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-explicit-any": 1,
-    "@typescript-eslint/no-inferrable-types": [
-      "warn", {
-        "ignoreParameters": true
-      }
+    "import/no-extraneous-dependencies": [
+      2,
+      { "devDependencies": ["**/test.tsx", "**/test.ts"] }
     ],
-    "@typescript-eslint/no-unused-vars": "warn"
+    "@typescript-eslint/indent": ["error", 2],
+    "object-curly-spacing": ["error", "never"],
+    "array-bracket-spacing": ["error", "never"],
+    "computed-property-spacing": ["error", "never"]
   }
 }

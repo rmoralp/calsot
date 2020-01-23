@@ -1,11 +1,11 @@
-import express from "express";
+import express from 'express';
+
 const app = express();
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.listen(3000, () => {
-  // tslint:disable-next-line:no-console
-  console.log('Example app listening on port 3000!');
+app.listen(process.env.PORT, () => {
+  console.log('Example app listening on port 3000!'); // eslint-disable-line
 });
