@@ -24,6 +24,10 @@
     "@typescript-eslint/indent": ["error", 2],
     "object-curly-spacing": ["error", "never"],
     "array-bracket-spacing": ["error", "never"],
-    "computed-property-spacing": ["error", "never"]
+    "computed-property-spacing": ["error", "never"],
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "never"],
+    "import/prefer-default-export": "off",
+    "import/extensions": "off"
   }
 }

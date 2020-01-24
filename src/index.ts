@@ -1,11 +1,10 @@
-import express from 'express';
+import express from 'express'
+import {env} from './env'
 
-const app = express();
+const app = express()
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.get('/', (req, res) => res.send(`${env.app.name} API with Calsot 🧅`))
 
-app.listen(process.env.PORT, () => {
-  console.log('Example app listening on port 3000!'); // eslint-disable-line
-});
+app.listen(env.port, () => {
+  console.log(`App listening on port ${env.port}!`) // eslint-disable-line
+})
