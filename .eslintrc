@@ -33,6 +33,8 @@
     "semi": ["error", "never"],
     "comma-dangle": ["error", "never"],
     "import/prefer-default-export": "off",
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off"
   }
 }
