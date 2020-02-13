@@ -1,0 +1,14 @@
+POST http://localhost:3000/categories HTTP/1.1
+Tenant: calsot
+Cache-Control: no-cache
+
+{
+    "id": "1",
+    "name": "girl",
+    "description": "lorem ipsum dolor et",
+    "imageUrl": "",
+    "slug": "girl",
+    "parentCategoryId": "1"
+}
+
+###

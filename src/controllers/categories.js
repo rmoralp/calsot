@@ -14,13 +14,15 @@ router.get(ROUTES.INDEX, async (req, res) => {
   res.send(response)
 })
 
-router.get(ROUTES.ITEM, async (req, res) => {
-  const response = await domain.getCategoryUseCase()
+router.post(ROUTES.INDEX, async (req, res) => {
+  const response = await domain.createCategoryUseCase().execute()
   res.send(response)
 })
 
-router.put(ROUTES.ITEM, async (req, res) => {
-  const response = await domain.saveCategoryUseCase()
+router.get(ROUTES.ITEM, async (req, res) => {
+  console.log(req)
+
+  const response = await domain.getCategoryUseCase()
   res.send(response)
 })
 

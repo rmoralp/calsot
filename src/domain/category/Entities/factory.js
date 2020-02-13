@@ -8,7 +8,7 @@ class CategoryEntitiesFactory {
     description,
     imageUrl,
     parentCategoryId
-  }): CategoryEntity => new CategoryEntity({
+  }) => new CategoryEntity({
     id,
     slug,
     name,
