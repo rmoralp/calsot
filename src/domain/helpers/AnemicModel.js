@@ -20,11 +20,14 @@ const mapValuesToPlainObjects = obj =>
 const anemicInstanceToObject = obj =>
   Object.keys(obj)
     .map(key => key.replace('_', ''))
-    .filter((key) => Object.prototype.hasOwnProperty.call(obj, key))
-    .reduce((result, key) => ({
-      ...result,
-      key: obj._properties[key]
-    }), {})
+    .filter(key => Object.prototype.hasOwnProperty.call(obj, key))
+    .reduce(
+      (result, key) => ({
+        ...result,
+        key: obj._properties[key]
+      }),
+      {}
+    )
 
 /**
  * Class AnemicModel have the responsibility of implement the common constructor and toJSON

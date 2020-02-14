@@ -7,10 +7,11 @@ class CategoryUseCasesFactory {
 
   static getCategoryListUseCase = () => Promise.resolve('get categories list')
 
-  static createCategoryUseCase = () => new CreateCategoryUseCase({
-    jsonRepository: CategoryRepositoriesFactory.jsonRepository(),
-    entityFactory: CategoryEntitiesFactory.categoryEntity
-  })
+  static createCategoryUseCase = () =>
+    new CreateCategoryUseCase({
+      jsonRepository: CategoryRepositoriesFactory.jsonRepository(),
+      entityFactory: CategoryEntitiesFactory.categoryEntity
+    })
 }
 
 export {CategoryUseCasesFactory}
