@@ -10,19 +10,17 @@ router.use((req, res, next) => {
 })
 
 router.get(ROUTES.INDEX, async (req, res) => {
-  const response = await domain.getCategoryListUseCase()
+  const response = await domain.getCategoryListUseCase().execute(req.body)
   res.send(response)
 })
 
 router.post(ROUTES.INDEX, async (req, res) => {
-  const response = await domain.createCategoryUseCase().execute()
+  const response = await domain.createCategoryUseCase().execute(req.body)
   res.send(response)
 })
 
 router.get(ROUTES.ITEM, async (req, res) => {
-  console.log(req)
-
-  const response = await domain.getCategoryUseCase()
+  const response = await domain.getCategoryUseCase().execute(req.body)
   res.send(response)
 })
 

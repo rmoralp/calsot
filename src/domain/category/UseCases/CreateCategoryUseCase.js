@@ -1,12 +1,24 @@
 class CreateCategoryUseCase {
-  constructor({jsonRepository, entityFactory}) {
-    this._jsonRepository = jsonRepository
+  constructor({entityFactory, service, uuid}) {
     this._entityFactory = entityFactory
+    this._service = service
+    this._uuid = uuid
   }
 
-  execute() {
-    // const categoryEntity = this._entityFactory(category)
-    return this._jsonRepository.createCategory()
+  async execute({slug, name, description, imageUrl, parentCategoryId} = {}) {
+    const categoryId = this._uuid.get()
+    const categoryEntity = this._entityFactory({
+      id: categoryId,
+      slug,
+      name,
+      description,
+      imageUrl,
+      parentCategoryId
+    })
+
+    return this._service
+      .execute(categoryEntity)
+      .then(categoryEntity => categoryEntity.toJSON())
   }
 }
 

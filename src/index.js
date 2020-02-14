@@ -1,4 +1,5 @@
 import express from 'express'
+import bodyParser from 'body-parser'
 import {env} from './env'
 
 import {ROUTES} from './config'
@@ -8,6 +9,10 @@ import {attributesRouter} from './controllers/attributes'
 import {brandsRouter} from './controllers/brands'
 
 const app = express()
+
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
+app.use(bodyParser.raw())
 
 app.get('/', (req, res) => res.send(`${env.app.name} API with Calsot 🧅`))
 

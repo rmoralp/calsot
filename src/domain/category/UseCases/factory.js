@@ -1,6 +1,7 @@
 import {CreateCategoryUseCase} from './CreateCategoryUseCase'
-import {CategoryRepositoriesFactory} from '../Repositories/factory'
 import {CategoryEntitiesFactory} from '../Entities/factory'
+import {CategoryServicesFactory} from '../Services/factory'
+import {uuid} from '../../helpers/uuid'
 
 class CategoryUseCasesFactory {
   static getCategoryUseCase = () => Promise.resolve('get category')
@@ -9,8 +10,9 @@ class CategoryUseCasesFactory {
 
   static createCategoryUseCase = () =>
     new CreateCategoryUseCase({
-      jsonRepository: CategoryRepositoriesFactory.jsonRepository(),
-      entityFactory: CategoryEntitiesFactory.categoryEntity
+      entityFactory: CategoryEntitiesFactory.categoryEntity,
+      service: CategoryServicesFactory.createCategoryService(),
+      uuid: uuid
     })
 }
 

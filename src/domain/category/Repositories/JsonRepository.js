@@ -1,6 +1,6 @@
 class JsonRepository {
-  createCategory() {
-    return Promise.resolve('save category')
+  async createCategory(categoryEntity) {
+    return categoryEntity
   }
 }
 

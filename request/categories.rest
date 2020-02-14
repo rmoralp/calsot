@@ -1,6 +1,7 @@
 POST http://localhost:3000/categories HTTP/1.1
 Tenant: calsot
 Cache-Control: no-cache
+content-type: application/json
 
 {
     "id": "1",
