@@ -1,14 +1,22 @@
+import {withNewId} from '../../../helpers/decorators/withUuid'
+
 class CreateCategoryUseCase {
-  constructor({entityFactory, service, uuid}) {
+  constructor({entityFactory, service}) {
     this._entityFactory = entityFactory
     this._service = service
-    this._uuid = uuid
   }
 
-  async execute({slug, name, description, imageUrl, parentCategoryId} = {}) {
-    const categoryId = this._uuid.get()
+  @withNewId()
+  async execute({
+    id,
+    slug,
+    name,
+    description,
+    imageUrl,
+    parentCategoryId
+  } = {}) {
     const categoryEntity = this._entityFactory({
-      id: categoryId,
+      id,
       slug,
       name,
       description,
