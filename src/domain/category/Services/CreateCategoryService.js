@@ -4,6 +4,7 @@ class CreateCategoryService {
   }
 
   async execute(categoryEntity) {
+    if (!categoryEntity.isValid()) return
     return this._jsonRepository.createCategory(categoryEntity)
   }
 }

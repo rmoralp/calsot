@@ -9,7 +9,9 @@ class JsonRepository {
   }
 
   async createCategory(categoryEntity) {
-    return this._storage.create(categoryEntity)
+    return this._storage
+      .create(categoryEntity.toJSON())
+      .then(cat => categoryEntity)
   }
 }
 

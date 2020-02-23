@@ -1,9 +1,15 @@
 class CategoryStorage {
   constructor({database}) {
     this._database = database
+    this._source = 'category'
+    this._database.setDefault({source: this._source})
   }
 
-  create = category => this._database.create(category)
+  create = payload =>
+    this._database.create({
+      source: this._source,
+      payload
+    })
 }
 
 export {CategoryStorage}

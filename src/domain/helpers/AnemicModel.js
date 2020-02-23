@@ -41,6 +41,10 @@ export class AnemicModel {
     })
   }
 
+  _isString(value) {
+    return typeof value === 'string' && Boolean(value.length)
+  }
+
   /**
    * Method toJSON will get our object keys and transform it to the same structure as our input object.
    * The method will:

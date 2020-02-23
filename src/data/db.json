@@ -1,0 +1,36 @@
+{
+  "category": [
+    {
+      "id": "94048266-8bce-49a1-b7b4-8911722ed6bc",
+      "slug": "girl",
+      "name": "girl",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": "",
+      "parentCategoryId": "1"
+    },
+    {
+      "id": "f6f71357-d002-4f27-84cd-10ac9732dec6",
+      "slug": "girl",
+      "name": "girl",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": "",
+      "parentCategoryId": "1"
+    },
+    {
+      "id": "be840d03-f2f5-4a06-a591-2d919b571f54",
+      "slug": "girl",
+      "name": "girl",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": "",
+      "parentCategoryId": "1"
+    },
+    {
+      "id": "25c31600-1f57-4889-8b47-20fafdf69c0e",
+      "slug": "girl",
+      "name": "girl",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": "",
+      "parentCategoryId": "1"
+    }
+  ]
+}
