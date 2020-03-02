@@ -1,4 +1,4 @@
-import {withNewId} from '../../../helpers/decorators/withUuid'
+import {inlineError} from '../../../helpers/decorators'
 
 class CreateCategoryUseCase {
   constructor({entityFactory, service}) {
@@ -6,9 +6,9 @@ class CreateCategoryUseCase {
     this._service = service
   }
 
-  @withNewId()
+  @inlineError
   async execute({
-    id,
+    id = 'asdasd',
     slug,
     name,
     description,
@@ -24,9 +24,10 @@ class CreateCategoryUseCase {
       parentCategoryId
     })
 
-    return this._service
-      .execute(categoryEntity)
-      .then(categoryEntity => categoryEntity.toJSON())
+    const [error, response] = await this._service.execute(categoryEntity)
+
+    if (error) return Promise.reject(error)
+    return response.toJSON()
   }
 }
 

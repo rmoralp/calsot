@@ -15,7 +15,15 @@ router.get(ROUTES.INDEX, async (req, res) => {
 })
 
 router.post(ROUTES.INDEX, async (req, res) => {
-  const response = await domain.createCategoryUseCase().execute(req.body)
+  const [error, response] = await domain
+    .createCategoryUseCase()
+    .execute(req.body)
+
+  if (error) {
+    res.status(error.code)
+    return res.send(error.message)
+  }
+
   res.send(response)
 })
 
