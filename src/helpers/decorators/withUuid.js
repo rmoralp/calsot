@@ -1,4 +1,4 @@
-import {uuid} from '../js/uuid'
+import {v4} from 'uuid'
 
 function withNewId() {
   return function(target) {
@@ -10,7 +10,7 @@ function withNewId() {
       const result = original.apply(this, [
         {
           ...args,
-          id: uuid.get()
+          id: v4()
         }
       ])
       return result

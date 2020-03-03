@@ -1,6 +1,7 @@
 import {CreateCategoryUseCase} from './CreateCategoryUseCase'
 import {CategoryEntitiesFactory} from '../Entities/factory'
 import {CategoryServicesFactory} from '../Services/factory'
+import {CommonMappersFactory} from '../../common/Mappers/factory'
 
 class CategoryUseCasesFactory {
   static getCategoryUseCase = () => Promise.resolve('get category')
@@ -9,7 +10,9 @@ class CategoryUseCasesFactory {
 
   static createCategoryUseCase = () =>
     new CreateCategoryUseCase({
-      entityFactory: CategoryEntitiesFactory.categoryEntity,
+      createEntityMapper: CommonMappersFactory.createEntityMapper().setEntityFactory(
+        CategoryEntitiesFactory.categoryEntity
+      ),
       service: CategoryServicesFactory.createCategoryService()
     })
 }

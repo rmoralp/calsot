@@ -1,22 +1,14 @@
 import {inlineError} from '../../../helpers/decorators'
 
 class CreateCategoryUseCase {
-  constructor({entityFactory, service}) {
-    this._entityFactory = entityFactory
+  constructor({createEntityMapper, service}) {
+    this._createEntityMapper = createEntityMapper
     this._service = service
   }
 
   @inlineError
-  async execute({
-    id = 'asdasd',
-    slug,
-    name,
-    description,
-    imageUrl,
-    parentCategoryId
-  } = {}) {
-    const categoryEntity = this._entityFactory({
-      id,
+  async execute({slug, name, description, imageUrl, parentCategoryId} = {}) {
+    const categoryEntity = this._createEntityMapper.map({
       slug,
       name,
       description,
