@@ -19,7 +19,8 @@
   "scripts": {
     "dev": "nodemon",
     "dev:serve": "babel-node src",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "test": "mocha --require @babel/register"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -34,7 +35,9 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-decorators": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.6",
     "babel-eslint": "10.0.3",
+    "chai": "^4.2.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-config-standard": "^14.1.0",
@@ -44,6 +47,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^7.1.0",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0"

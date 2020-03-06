@@ -27,6 +27,6 @@ module.exports = {
     "no-unused-expressions": [RULES.OFF],
     "babel/no-unused-expressions": [RULES.OFF],
     "no-only-tests/no-only-tests": [RULES.OFF],
-    'prettier/prettier': [RULES.ERROR, prettierOptions]
+    "prettier/prettier": [RULES.ERROR, prettierOptions]
   }
 }
