@@ -4,7 +4,6 @@ Cache-Control: no-cache
 content-type: application/json
 
 {
-    "id": "1",
     "name": "girl",
     "description": "lorem ipsum dolor et",
     "imageUrl": "",

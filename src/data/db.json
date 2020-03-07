@@ -63,6 +63,62 @@
       "description": "lorem ipsum dolor et",
       "imageUrl": "",
       "parentCategoryId": "1"
+    },
+    {
+      "id": "ee4f64e5-b71b-4bfc-82cc-73a1c65a424a",
+      "slug": "test-category",
+      "name": "test category",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": ""
+    },
+    {
+      "id": "e9570fe7-789a-4563-a743-c82943234582",
+      "slug": "test-category",
+      "name": "test category",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": ""
+    },
+    {
+      "id": "66c8ffdb-708f-4630-841a-389c32b335ac",
+      "slug": "test-category",
+      "name": "test category",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": ""
+    },
+    {
+      "id": "06bcd66d-8ad3-4c31-9f00-ece0cc9bfd37",
+      "slug": "test-category",
+      "name": "test category",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": ""
+    },
+    {
+      "id": "96f33ae2-5067-47e8-ab06-617169c40675",
+      "slug": "test-category",
+      "name": "test category",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": ""
+    },
+    {
+      "id": "1d6a5245-762d-41c4-9249-25bfc68a5edc",
+      "slug": "test-category",
+      "name": "test category",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": ""
+    },
+    {
+      "id": "f88ed63a-2173-4596-b4f2-946c1068776e",
+      "slug": "test-category",
+      "name": "test category",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": ""
+    },
+    {
+      "id": "9974a164-35ce-4ff8-9c28-6574919ba78b",
+      "slug": "test-category",
+      "name": "test category",
+      "description": "lorem ipsum dolor et",
+      "imageUrl": ""
     }
   ]
 }
