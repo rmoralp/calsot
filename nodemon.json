@@ -1,6 +1,6 @@
 {
   "watch": ["src"],
-  "ext": ".ts,.js",
+  "ext": ".js",
   "ignore": [],
   "exec": "npm run lint && npm run dev:serve"
 }
